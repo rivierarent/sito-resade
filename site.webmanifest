@@ -1,0 +1,9 @@
+{
+  "name": "Residenza Adelaide – Finale Ligure",
+  "short_name": "Res. Adelaide",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0e3a53",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

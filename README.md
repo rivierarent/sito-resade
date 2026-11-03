@@ -5,6 +5,7 @@ importate il 30/10/2026 dall'anteprima pubblicata su https://resade-anteprima.ve
 
 - `index.html` – home (testi IT/EN/DE gestiti da `assets/js/i18n.js`, lingua via `?lang=en|de`)
 - `privacy.html` – informativa privacy
+- `liguria-news/` – pagina "Liguria News" (guida a eventi, cosa fare e dove mangiare in Liguria e Costa Azzurra), con le sue foto in `liguria-news/foto/`
 - `assets/css/style.css` – stili
 - `assets/js/config.js` – dati configurabili (contatti, appartamenti, offerte, link booking)
 - `assets/js/main.js` – logica della pagina

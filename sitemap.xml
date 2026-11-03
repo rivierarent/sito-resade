@@ -9,6 +9,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.resade.it/liguria-news/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.resade.it/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

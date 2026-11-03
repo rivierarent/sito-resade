@@ -10,7 +10,4 @@ importate il 30/10/2026 dall'anteprima pubblicata su https://resade-anteprima.ve
 - `assets/js/main.js` – logica della pagina
 - `assets/img/logo.svg`, `favicon.svg`, `site.webmanifest`, `robots.txt`, `sitemap.xml`
 
-Immagini mancanti: le seguenti foto sono referenziate nel codice ma non presenti nemmeno sull'anteprima online (404),
-vanno aggiunte in `assets/img/`:
-`hero.jpg`, `monolocale.jpg`, `mansarda.jpg`, `bilocale.jpg`, `trilocale.jpg`, `bike.jpg`, `spiaggia.jpg`,
-`finalborgo.jpg`, `varigotti.jpg`, `outdoor.jpg`, `og-cover.jpg` (anteprima social).
+Foto in `assets/img/` riprese dal sito WordPress precedente (resade.it/wp-content/uploads), ridimensionate per il web.

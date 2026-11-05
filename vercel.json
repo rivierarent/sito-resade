@@ -1,0 +1,132 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "de"
+        }
+      ],
+      "destination": "/de/",
+      "permanent": true
+    },
+    {
+      "source": "/en/:path+/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/de/:path+/",
+      "destination": "/de/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/:path*/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/contatti/",
+      "destination": "/#contatti",
+      "permanent": true
+    },
+    {
+      "source": "/listino-appartamenti/",
+      "destination": "/#appartamenti",
+      "permanent": true
+    },
+    {
+      "source": "/finale-ligure/",
+      "destination": "/#zona",
+      "permanent": true
+    },
+    {
+      "source": "/online-check-in/",
+      "destination": "/#contatti",
+      "permanent": true
+    },
+    {
+      "source": "/residence-adelaide-a-finale-ligure/:path*/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/condizioni-legali/:path*/",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/resade_news/:path*/",
+      "destination": "/liguria-news/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*/",
+      "destination": "/liguria-news/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*/",
+      "destination": "/liguria-news/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/liguria-news/foto/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ]
+}

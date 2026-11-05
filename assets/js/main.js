@@ -33,28 +33,27 @@
       el.innerHTML = t(el.getAttribute("data-i18n"));
     });
     $$(".lang [data-lang]").forEach(function (b) {
-      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+      if (b.getAttribute("data-lang") === lang) b.setAttribute("aria-current", "true");
+      else b.removeAttribute("aria-current");
     });
-    try { localStorage.setItem("resade-lang", lang); } catch (e) { /* ignore */ }
     updateNights();
     if (typeof updateCalc === "function") updateCalc();
     if (typeof renderOffers === "function") renderOffers();
     if (typeof applyParking === "function") applyParking();
   }
 
+  // Each language has its own URL (/, /en/, /de/) with the text already in
+  // the HTML, so search engines and AI assistants read it without running JS.
   function initialLang() {
-    var q = new URLSearchParams(location.search).get("lang");
-    if (q && LANGS.indexOf(q) > -1) return q;
-    try {
-      var s = localStorage.getItem("resade-lang");
-      if (s && LANGS.indexOf(s) > -1) return s;
-    } catch (e) { /* ignore */ }
-    var nav = (navigator.language || "it").slice(0, 2).toLowerCase();
-    return LANGS.indexOf(nav) > -1 ? nav : "en";
+    var l = (document.documentElement.lang || "it").slice(0, 2);
+    return LANGS.indexOf(l) > -1 ? l : "it";
   }
 
-  $$(".lang [data-lang]").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  // Keep the current section when switching language.
+  $$(".lang [data-lang]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      if (location.hash) a.href = a.getAttribute("href").split("#")[0] + location.hash;
+    });
   });
 
   /* ---------------- Config → DOM ---------------- */
